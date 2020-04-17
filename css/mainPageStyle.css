@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-html, body {
+body {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -91,11 +91,40 @@ html, body {
           opacity: 0.7;
           color: white; }
 
-.body-content {
-  display: none; }
-  .body-content .header {
+.movie-content {
+  font-family: 'Open Sans', sans-serif;
+  display: none;
+  padding: 2em 30% 1em 10%;
+  position: absolute; }
+  .movie-content .header {
     padding: 0;
     margin: 0;
-    color: white; }
+    color: white;
+    font-size: 5em;
+    font-weight: 800;
+    letter-spacing: 3px; }
+    .movie-content .header .heart {
+      font-size: 0.65em; }
+  .movie-content .about {
+    margin-top: 2em;
+    color: white;
+    padding: 1em 20em 1em 0; }
+  .movie-content .link {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    padding: 0.5em 2em;
+    border-radius: 4px; }
+    .movie-content .link span {
+      text-align: center;
+      font-size: 3.2em; }
+
+.next-movie {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 /*# sourceMappingURL=mainPageStyle.css.map */
