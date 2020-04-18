@@ -12,8 +12,6 @@ let imdb = document.querySelector(".imdb-link");
 let heart = document.querySelector("#heart"); 
 //ITEMS ON PAGE
 
-let hasClicked = false;
-
 //API AND MOVIE VARIABLES
 let genreUrl = 'https://api.themoviedb.org/3/genre/movie/list';//API
 let key = '7be00fe841740644dc3f1b6a0bd11fa7';                  //API
