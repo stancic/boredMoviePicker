@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.menu-icon {
+  display: inline-block;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer; }
+  .menu-icon .menu-btn-burger {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: all .5s ease-in-out; }
+    .menu-icon .menu-btn-burger::before, .menu-icon .menu-btn-burger::after {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 3px;
+      background-color: white;
+      transition: all .5s ease-in-out; }
+    .menu-icon .menu-btn-burger::before {
+      transform: translateY(-12px); }
+    .menu-icon .menu-btn-burger::after {
+      transform: translateY(12px); }
+  .menu-icon.open .menu-btn-burger {
+    transform: translateX(0);
+    background: transparent;
+    box-shadow: none; }
+  .menu-icon.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(0, 0); }
+  .menu-icon.open .menu-btn-burger::after {
+    transform: rotate(-45deg) translate(0, 0); }
+
+.menu {
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s; }
+  .menu .menu-content {
+    width: 70%;
+    height: 100%;
+    background: blue;
+    float: right; }
+  .menu .menu-transparent-background {
+    width: 30%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); }
+
+/*# sourceMappingURL=menu.css.map */

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+.movie-content {
+  font-family: 'Open Sans', sans-serif;
+  display: none;
+  padding: 6em 30% 1em 10%;
+  position: absolute; }
+  .movie-content .movie-title {
+    display: -webkit-inline-box;
+    line-height: 4em; }
+    .movie-content .movie-title .header {
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: 4em;
+      font-weight: 800;
+      letter-spacing: 3px; }
+    .movie-content .movie-title .heart {
+      font-size: 4em;
+      color: white;
+      cursor: pointer; }
+  .movie-content .about {
+    margin-top: 2em;
+    color: white;
+    padding: 1em 20em 1em 0; }
+  .movie-content .trailer-link, .movie-content .imdb-link {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 800;
+    padding: 0.5em 2em;
+    border-radius: 4px; }
+    .movie-content .trailer-link span, .movie-content .imdb-link span {
+      text-align: center;
+      font-size: 3.2em; }
+
+.next-movie {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 14px 14px 0 0;
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); }
+  .next-movie .lower-form {
+    display: -webkit-inline-box;
+    padding: 2em 3em 0.7em 3em; }
+
+/*# sourceMappingURL=moviePage.css.map */

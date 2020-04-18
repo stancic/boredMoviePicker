@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); //font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); //font-family: 'Roboto', sans-serif;
+//fonts
+
+//MENU
+.menu-icon{
+    display: inline-block;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    .menu-btn-burger{
+        width: 35px;
+        height: 3px;
+        background-color: white;
+        transition: all .5s ease-in-out;
+        &::before,&::after{
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 3px;
+            background-color: white;
+            transition: all .5s ease-in-out;
+        }
+        &::before{
+            transform:translateY(-12px);
+        }
+        &::after{
+            transform:translateY(12px);
+        }
+    }
+    &.open .menu-btn-burger{
+        transform: translateX(0);
+        background:transparent;
+        box-shadow: none;
+    }
+    &.open .menu-btn-burger::before{
+        transform:rotate(45deg) translate(0, 0);
+    }
+    &.open .menu-btn-burger::after{
+        transform:rotate(-45deg) translate(0, 0);
+    }
+}
+.menu{
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    .menu-content{
+        width: 70%;
+        height: 100%;
+        background: blue;
+        float: right;
+    }
+    .menu-transparent-background{
+        width: 30%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
