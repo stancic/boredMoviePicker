@@ -26,12 +26,6 @@ body {
   width: 100%;
   position: relative;
   height: 100%; }
-  .pick-page select option {
-    background: black;
-    font-size: 0.8em; }
-  .pick-page select select {
-    -webkit-appearance: none;
-    -moz-appearance: none; }
   .pick-page .form-title {
     position: absolute;
     font-size: 4em;
@@ -42,74 +36,89 @@ body {
     transform: translate(-50%, -50%);
     text-transform: capitalize;
     letter-spacing: 5px; }
-  .pick-page .form-container {
+
+.form-container {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 255, 255, 0.151);
+  padding: 0.5em 10em 0.4em 3em; }
+  .form-container .form-position {
+    font-size: 1.2em; }
+
+.form-dropdown {
+  font-family: 'Roboto', sans-serif;
+  padding: 0.7em 8em 0em 0; }
+  .form-dropdown select option {
+    background: black;
+    font-size: 0.8em; }
+  .form-dropdown select select {
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+  .form-dropdown ::placeholder {
+    color: #F5F5F5; }
+
+.select, .lower-select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.712);
+  background: none;
+  width: 10em;
+  color: #F5F5F5; }
+
+.form-button {
+  margin-right: 0;
+  padding: 0; }
+  .form-button .button, .form-button .lower-button {
+    padding: 0.7em 4em 0.7em 4em;
+    background: transparent linear-gradient(103deg, #C53CD4 0%, #4626B3 100%) 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    border: none;
+    opacity: 1;
+    color: black;
     font-family: 'Roboto', sans-serif;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid rgba(255, 255, 255, 0.151);
-    padding: 0.5em 10em 0.4em 3em; }
-    .pick-page .form-container .form-position {
-      font-size: 1.2em; }
-    .pick-page .form-container .form-dropdown {
-      font-family: 'Roboto', sans-serif;
-      padding: 0.7em 8em 0em 0; }
-    .pick-page .form-container ::placeholder {
-      color: #F5F5F5; }
-    .pick-page .form-container .select {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2em;
-      border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.712);
-      background: none;
-      width: 10em;
-      color: #F5F5F5; }
-    .pick-page .form-container .form-button {
-      margin-right: 0;
-      padding: 0; }
-      .pick-page .form-container .form-button .button {
-        padding: 0.7em 4em 0.7em 4em;
-        background: transparent linear-gradient(103deg, #C53CD4 0%, #4626B3 100%) 0% 0% no-repeat padding-box;
-        border-radius: 8px;
-        border: none;
-        opacity: 1;
-        color: black;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 100;
-        font-size: 1.3em;
-        letter-spacing: 1.2px;
-        white-space: nowrap;
-        text-align: center;
-        cursor: pointer;
-        transition: ease all 0.4s;
-        border: 1.3px solid transparent; }
-        .pick-page .form-container .form-button .button:hover {
-          border: 1.3px solid white;
-          opacity: 0.7;
-          color: white; }
+    font-weight: 100;
+    font-size: 1.3em;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    transition: ease all 0.4s;
+    border: 1.3px solid transparent; }
+    .form-button .button:hover, .form-button .lower-button:hover {
+      border: 1.3px solid white;
+      opacity: 0.7;
+      color: white; }
 
 .movie-content {
   font-family: 'Open Sans', sans-serif;
   display: none;
-  padding: 2em 30% 1em 10%;
+  padding: 6em 30% 1em 10%;
   position: absolute; }
-  .movie-content .header {
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-size: 5em;
-    font-weight: 800;
-    letter-spacing: 3px; }
-    .movie-content .header .heart {
-      font-size: 0.65em; }
+  .movie-content .movie-title {
+    display: -webkit-inline-box;
+    line-height: 4em; }
+    .movie-content .movie-title .header {
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: 4em;
+      font-weight: 800;
+      letter-spacing: 3px; }
+    .movie-content .movie-title .heart {
+      font-size: 4em;
+      color: white;
+      cursor: pointer; }
   .movie-content .about {
     margin-top: 2em;
     color: white;
     padding: 1em 20em 1em 0; }
-  .movie-content .link {
+  .movie-content .trailer-link, .movie-content .imdb-link {
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -118,13 +127,21 @@ body {
     font-weight: 800;
     padding: 0.5em 2em;
     border-radius: 4px; }
-    .movie-content .link span {
+    .movie-content .trailer-link span, .movie-content .imdb-link span {
       text-align: center;
       font-size: 3.2em; }
 
 .next-movie {
   position: absolute;
   bottom: 0;
-  width: 100%; }
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 14px 14px 0 0;
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); }
+  .next-movie .lower-form {
+    display: -webkit-inline-box;
+    padding: 2em 3em 0.7em 3em; }
 
 /*# sourceMappingURL=mainPageStyle.css.map */
