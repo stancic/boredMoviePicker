@@ -32,18 +32,38 @@ setTimeout(function(){
 
 
 $(".button").click(function(){
-    $(".pick-page").css("display","none");
-    $(".movie-content").slideToggle();
-    $(".next-movie").css("display","inline-block");
-    apiCall(); 
-    lowerGenre.value = genre.value;
-    lowerYear.value = year.value;
+    console.log(year.value.length);
+    console.log(genre.value);
+    if(year.value.length<4 || year.value.length>4 || year.value<1874 || year.value>2020 || genre.value.length==0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You didn\'t pick something :)'
+        });
+    }else{
+        $(".pick-page").css("display","none");
+        $(".movie-content").slideToggle();
+        $(".next-movie").css("display","inline-block");
+        apiCall(); 
+        lowerGenre.value = genre.value;
+        lowerYear.value = year.value;
+    }
+    
 });
 
 $(".lower-button").click(function(){
     genre = lowerGenre;
     year = lowerYear;
-    apiCall();
+    if(year.value.length<4 || year.value.length>4 || year.value<1874 || year.value>2020 || genre.value.length==0){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You didn\'t pick something :)'
+        });
+    }else{
+        apiCall();
+        heart.innerHTML = "favorite_border";
+    }
 });
 
 
@@ -74,6 +94,9 @@ function getData(){
         movieTitle = data.results[randomPick].title;
         movieOverview = data.results[randomPick].overview;
         movieBackgroundURL = JSON.stringify(data.results[randomPick].backdrop_path).replace(/"/g,'');
+        if(movieBackgroundURL == "null"){
+            movieBackgroundURL = JSON.stringify(data.results[randomPick].poster_path).replace(/"/g,'');
+        }
         movieBackground = 'https://image.tmdb.org/t/p/original'  + movieBackgroundURL ;
         movieId = data.results[randomPick].id;
         printOnScreen();
