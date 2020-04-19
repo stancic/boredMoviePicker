@@ -30,7 +30,7 @@ setTimeout(function(){
 
 
 $(".button").click(function(){
-    console.log(year.value.length);
+    console.log(year.value);
     console.log(genre.value);
     if(year.value.length<4 || year.value.length>4 || year.value<1874 || year.value>2020 || genre.value.length==0){
         Swal.fire({
@@ -88,7 +88,8 @@ $(heart).click(function(){
 
 function getData(){
     let randomPick = Math.floor(Math.random()*19);
-    $.getJSON(moviesUrl + "?api_key=" + key + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&year="+ year.value  + "&with_genres=" + genreId,function(data){
+    let randomPage = Math.floor(Math.random()*101);
+    $.getJSON(moviesUrl + "?api_key=" + key + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page="+ randomPage.value + "&year="+ year.value  + "&with_genres=" + genreId,function(data){
         movieTitle = data.results[randomPick].title;
         movieOverview = data.results[randomPick].overview;
         movieBackgroundURL = JSON.stringify(data.results[randomPick].backdrop_path).replace(/"/g,'');
