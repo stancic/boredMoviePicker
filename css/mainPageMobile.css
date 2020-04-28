@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800,800i&display=swap");
+@media (max-width: 700px) {
+  .title {
+    font-size: 5em; }
+
+  .pick-page .form-title {
+    padding-top: 3em;
+    text-align: center;
+    font-size: 3em; }
+
+  .form-container {
+    top: 70%;
+    display: inline-block;
+    border: none;
+    padding: 0; }
+
+  .form-dropdown {
+    padding: 2em 0; }
+
+  .menu-icon {
+    right: 0;
+    top: 0%; }
+
+  .menu-transparent-background {
+    width: 0%;
+    display: none; }
+
+  .menu {
+    width: 0; }
+    .menu .menu-content {
+      width: 100%;
+      display: block; }
+
+  .goback {
+    margin-top: 1em;
+    font-size: 1.2em; }
+
+  .login-container {
+    display: inline-block; }
+
+  .username,
+  .password,
+  .signup-link {
+    width: 200px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: text; }
+
+  .signup-holder .account-button {
+    padding: 25px; }
+  .signup-holder label {
+    padding-bottom: 0.5em; }
+  .signup-holder .username {
+    top: 33%; }
+  .signup-holder .password {
+    top: 50%; }
+  .signup-holder .password.signup-password.right {
+    top: 68%; }
+
+  .email {
+    top: 18%;
+    width: 200px; }
+    .email .account {
+      width: 200px; }
+
+  .username {
+    top: 30%;
+    border-bottom: 1px solid #707070; }
+
+  .account.user {
+    width: 200px; }
+
+  .account {
+    width: 170px; }
+
+  .signup-link {
+    display: block;
+    top: 70%; }
+    .signup-link a {
+      color: black;
+      font-weight: 600; }
+
+  .password {
+    top: 50%;
+    border-bottom: 1px solid #707070; }
+    .password span {
+      cursor: pointer; }
+
+  .password.signup-password .account {
+    width: 175px; }
+
+  .account-button {
+    font-size: 0.9em;
+    margin-top: 5em; } }
+
+/*# sourceMappingURL=mainPageMobile.css.map */

@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="css/mainPageStyle.css">
     <link rel="stylesheet" type="text/css" href="css/moviePage.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/mainPageMobile.css">
+    
     <link rel = "icon" href = "img/Icon.png"  type = "image/x-icon">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -68,8 +71,8 @@
         </div>
         <p class="about"></p>
         <div class="icons-container">
-            <a href="#" class="trailer-link"><span class="material-icons">play_circle_filled</span><br>Trailer</a>
-            <a href="#" class="imdb-link"><span class="material-icons ">notes</span><br>About</a>
+            <a href="#" target="_blank" class="trailer-link"><span class="material-icons">play_circle_filled</span><br>Trailer</a>
+            <a href="#" target="_blank" class="imdb-link"><span class="material-icons ">notes</span><br>About</a>
         </div>
     </div>
     <div class="next-movie">
@@ -120,15 +123,74 @@
                 <h1>Bored?</h1>
             </div>
             <ul class="menu-links">
-                <li><a class="link" href="#">Log in</a></li>
-                <li><a class="link" href="#">Sign up</a></li>
+                <li class="login"><a class="link" href="#">Log in</a></li>
+                <li class="signup"><a class="link" href="#">Sign up</a></li>
             </ul>
                 
         </div>
         <div class="menu-transparent-background"></div>
     </div>
-    
+
+    <!--MENU END-->
+    <!--LOGIN-->
+    <div class="login-holder">
+        <form method="POST" action="users.php">
+            <div class="login-container">
+                <span class="goback"><span style="color:black; font-weight: 800; font-size: 0.75em;" class="material-icons">arrow_back_ios</span>Back to menu</span>
+                <div class="username">
+                    <label for ="username">Username/E-mail</label>
+                    <input  type="text" name="username" class="account user">
+                </div>
+                
+                <div class="password">
+                    <label for ="password">Password</label>
+                    <input type="password" name="password" class="account">
+                    <span class="password-see material-icons">visibility</span>
+                </div>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#">Sign up!</a></p>
+                </div>
+                <div class="account-form-button">
+                    <button type="submit" name="login-button" class="account-button">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--LOGIN END-->
+
+    <!--SIGNUP-->
+    <div class="signup-holder">
+        <form method="POST" action="users.php">
+            <div class="signup-container">
+                <span class="goback"><span style="color:black; font-weight: 800; font-size: 0.75em;" class="material-icons">arrow_back_ios</span>Back to menu</span>
+                <div class="email">
+                    <label for ="email">E-mail</label>
+                    <input  type="text" name="email" class="account">
+                </div> 
+                <div class="username signup-username">
+                    <label for ="username">Username</label>
+                    <input  type="text" name="username"  class="account user">
+                </div>              
+                <div class="password signup-password left">
+                    <label for ="signupPassword">Password</label>
+                    <input type="password" name="signupPassword" class="account">
+                    <span class="signup-password-seePW material-icons">visibility</span>
+                </div>
+                 <div class="password signup-password right">
+                    <label for ="passwordConfirm">Confirm password</label>
+                    <input type="password" name="passwordConfirm" class="account">
+                    <span class="signup-password-seeCPW material-icons">visibility</span>
+                </div>
+                
+                <div class="account-form-button">
+                    <button type="submit" name="login-button" class="account-button">Sign up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--SIGNUP END-->
 </body>
 <script src="javascript/menu.js"></script>
 <script src="javascript/mainPageScript.js"></script>
+<script src="javascript/login.js"></script>
 </html>

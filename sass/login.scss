@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); //font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); //font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800,800i&display=swap');
+
+//fonts
+.login-holder,
+.signup-holder {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: none;
+    position: relative;
+    z-index: 5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login-container,
+.signup-container {
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.goback {
+    display: inline-block;
+    line-height: 2.4em;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 2.4em;
+    margin-left: 1em;
+    cursor: pointer;
+
+}
+
+label {
+    display: block;
+    text-align: left;
+    padding-bottom: 2em;
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+.username,
+.email,
+.password,
+.account-form-button,
+.signup-link {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: text;
+}
+
+.username {
+    top: 25%;
+    border-bottom: 1px solid #707070;
+}
+
+.password {
+    top: 50%;
+    border-bottom: 1px solid #707070;
+    span {
+        cursor: pointer;
+    }
+}
+
+.signup-link {
+    top: 65%;
+
+    a {
+        color: black;
+        font-weight: 600;
+    }
+}
+
+.account-form-button {
+    top: 80%;
+}
+.account.user{
+    width: 474px;
+}
+.account {
+    width: 450px;
+    font-size: 1.3em;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.account-button {
+    font-size: 1.1em;
+    letter-spacing: 1.7px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 2em 4em;
+    background: transparent linear-gradient(90deg, #B12424 0%, #390404 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 7px;
+    opacity: 1;
+    transition: all ease 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 10px 8px 22px #00000073;
+    }
+}
+
+.email{
+    top: 20%;
+    border-bottom: 1px solid #707070;
+}
+.signup-username{
+    top: 40%;
+}
+
+.signup-password{
+    width: 250px;
+    .account{
+        width: 225px;
+    }
+    span{
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+    }
+}
+.left{
+    left: 275px;
+    top: 57%;
+}
+.right{
+    left: 965px;
+    top: 57%;
+}
+

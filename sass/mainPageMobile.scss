@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); //font-family: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); //font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800,800i&display=swap');
+
+@media(max-width: 700px){
+    //TITLE AND PICK FORM
+    .title{
+        font-size: 5em;
+    }
+    .pick-page{
+        .form-title{
+            padding-top: 3em;
+            text-align: center;
+            font-size: 3em;
+        }
+    }
+    .form-container{
+        top: 70%;
+        display: inline-block;
+        border: none;
+        padding: 0;
+    }
+    .form-dropdown{
+        padding: 2em 0;
+    }
+    //END
+
+    //MENU
+    .menu-icon{
+        right: 0;
+        top: 0%;
+    }
+    .menu-transparent-background{
+        width: 0%;
+        display: none;
+    }
+    .menu{
+        width: 0;
+        .menu-content{
+            width: 100%;
+            display: block;
+        }
+    }
+    //END
+
+    //LOGIN FORM
+    .goback{
+        margin-top: 1em; 
+        font-size: 1.2em;
+    }
+    .login-container{
+        display: inline-block;
+    }
+    .username,
+    .password,
+    .signup-link {
+        width: 200px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: text;
+    }
+    .signup-holder{
+        .account-button{
+            padding: 25px;
+        }
+        label{
+            padding-bottom: 0.5em;
+        }
+        .username{
+            top: 33%;
+        }
+        .password{
+            top: 50%;
+        }
+        .password.signup-password.right{
+            top: 68%;
+        }
+    }
+    .email{
+        top: 18%;
+        width: 200px;
+        .account{
+            width: 200px;
+        }
+    }
+    .username {
+        top: 30%;
+        border-bottom: 1px solid #707070;
+    }
+    .account.user{
+        width: 200px;
+    }
+    .account{
+        width: 170px;
+    }    
+    .signup-link {
+        display: block;
+        top: 70%;
+        a {
+            color: black;
+            font-weight: 600;
+        }
+    }
+    .password {
+        top: 50%;
+        border-bottom: 1px solid #707070;
+        span {
+            cursor: pointer;
+        }
+    }
+
+    .password.signup-password{
+        .account{
+            width: 175px;
+        }
+    }
+
+    
+    .account-button{
+        font-size: 0.9em;
+        margin-top: 5em;
+    }
+ 
+}
