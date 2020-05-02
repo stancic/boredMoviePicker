@@ -10,6 +10,7 @@ let movieParagraph = document.querySelector(".about")
 let trailer = document.querySelector(".trailer-link");
 let imdb = document.querySelector(".imdb-link");
 let heart = document.querySelector("#heart");
+let screenSize = window.matchMedia("(max-width: 700px)");
 //ITEMS ON PAGE
 
 //API AND MOVIE VARIABLES
@@ -18,7 +19,7 @@ let key = '7be00fe841740644dc3f1b6a0bd11fa7'; //API
 let moviesUrl = 'https://api.themoviedb.org/3/discover/movie'; //API
 let trailerUrl = 'https://api.themoviedb.org/3/movie/'; //API
 let externalIDUrl = 'https://api.themoviedb.org/3/movie/'; //API
-let genreId, movieTitle, movieOverview, movieBackground, movieTrailer, movieId; //MOVIE(PRINT ON SCREEN)
+let genreId, movieTitle, movieOverview, movieBackground, movieTrailer, movieId, movieBackgroundURL, moviePosterURL; //MOVIE(PRINT ON SCREEN)
 let movieTitles = [];
 let imdbId;
 let movies = [];
@@ -105,10 +106,16 @@ function getData(year) {
             movieTitle = data.results[newRandom].title;
             movieOverview = data.results[newRandom].overview;
             movieBackgroundURL = JSON.stringify(data.results[newRandom].backdrop_path).replace(/"/g, '');
+            moviePosterURL = JSON.stringify(data.results[newRandom].poster_path).replace(/"/g, '');
             if (movieBackgroundURL == "null") {
-                movieBackgroundURL = JSON.stringify(data.results[newRandom].poster_path).replace(/"/g, '');
+                movieBackgroundURL = moviePosterURL;
             }
-            movieBackground = 'https://image.tmdb.org/t/p/original' + movieBackgroundURL;
+            if(screenSize.matches){
+                console.log("mobitel");
+                movieBackground = 'https://image.tmdb.org/t/p/original' + moviePosterURL;
+            } else{
+                movieBackground = 'https://image.tmdb.org/t/p/original' + movieBackgroundURL;
+            }
             movieId = data.results[newRandom].id;
             getTrailer();
             getIMDBid();
@@ -119,10 +126,17 @@ function getData(year) {
             movieOverview = data.results[randomPick].overview;
             
             movieBackgroundURL = JSON.stringify(data.results[randomPick].backdrop_path).replace(/"/g, '');
+            moviePosterURL = JSON.stringify(data.results[randomPick].poster_path).replace(/"/g, '');
             if (movieBackgroundURL == "null") {
-                movieBackgroundURL = JSON.stringify(data.results[randomPick].poster_path).replace(/"/g, '');
+                movieBackgroundURL = moviePosterURL;
             }
-            movieBackground = 'https://image.tmdb.org/t/p/original' + movieBackgroundURL;
+            if(screenSize.matches){
+                console.log("mobitel");
+                movieBackground = 'https://image.tmdb.org/t/p/original' + moviePosterURL;
+            }
+            else{
+                movieBackground = 'https://image.tmdb.org/t/p/original' + movieBackgroundURL;
+            }
             movieId = data.results[randomPick].id;
             getTrailer();
             getIMDBid();
@@ -174,6 +188,5 @@ function wasMovieHere(arrayOfMovies, movie) {
     if(count>0){
         return true;
     } else return false;
-    
 }
 //JQUERY END
